@@ -1,0 +1,168 @@
+
+Résultat 2° requête Elasticsearch:
+{
+  "took": 13,
+  "errors": false,
+  "items": [
+    {
+      "index": {
+        "_index": "image-index",
+        "_id": "1",
+        "_version": 2,
+        "result": "updated",
+        "forced_refresh": true,
+        "_shards": {
+          "total": 2,
+          "successful": 2,
+          "failed": 0
+        },
+        "_seq_no": 3,
+        "_primary_term": 1,
+        "status": 200
+      }
+    },
+    {
+      "index": {
+        "_index": "image-index",
+        "_id": "2",
+        "_version": 2,
+        "result": "updated",
+        "forced_refresh": true,
+        "_shards": {
+          "total": 2,
+          "successful": 2,
+          "failed": 0
+        },
+        "_seq_no": 4,
+        "_primary_term": 1,
+        "status": 200
+      }
+    },
+    {
+      "index": {
+        "_index": "image-index",
+        "_id": "3",
+        "_version": 2,
+        "result": "updated",
+        "forced_refresh": true,
+        "_shards": {
+          "total": 2,
+          "successful": 2,
+          "failed": 0
+        },
+        "_seq_no": 5,
+        "_primary_term": 1,
+        "status": 200
+      }
+    }
+  ]
+}
+
+
+Résultat 3° requête Elasticsearch:
+{
+  "took": 53,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 3,
+      "relation": "eq"
+    },
+    "max_score": 0.008547009,
+    "hits": [
+      {
+        "_index": "image-index",
+        "_id": "1",
+        "_score": 0.008547009,
+        "_source": {
+          "image-vector": [
+            1,
+            5,
+            -20
+          ],
+          "title-vector": [
+            12,
+            50,
+            -10,
+            0,
+            1
+          ],
+          "title": "moose family",
+          "file-type": "jpg"
+        },
+        "fields": {
+          "title": [
+            "moose family"
+          ],
+          "file-type": [
+            "jpg"
+          ]
+        }
+      },
+      {
+        "_index": "image-index",
+        "_id": "3",
+        "_score": 0.00061349693,
+        "_source": {
+          "image-vector": [
+            15,
+            11,
+            23
+          ],
+          "title-vector": [
+            1,
+            5,
+            25,
+            50,
+            20
+          ],
+          "title": "full moon",
+          "file-type": "jpg"
+        },
+        "fields": {
+          "title": [
+            "full moon"
+          ],
+          "file-type": [
+            "jpg"
+          ]
+        }
+      },
+      {
+        "_index": "image-index",
+        "_id": "2",
+        "_score": 0.00045045046,
+        "_source": {
+          "image-vector": [
+            42,
+            8,
+            -15
+          ],
+          "title-vector": [
+            25,
+            1,
+            4,
+            -12,
+            2
+          ],
+          "title": "alpine lake",
+          "file-type": "png"
+        },
+        "fields": {
+          "title": [
+            "alpine lake"
+          ],
+          "file-type": [
+            "png"
+          ]
+        }
+      }
+    ]
+  }
+}
